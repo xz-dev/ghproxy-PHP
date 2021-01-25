@@ -6,6 +6,8 @@ RUN apt-get update && \
 	apt-get clean
 #启动程序
 COPY ./ghproxy /ghproxy
+WORKDIR /ghproxy
+
 RUN mv /ghproxy/ghproxy.conf /etc/nginx/conf.d/
 
 # Install Composer
@@ -13,7 +15,5 @@ RUN curl -sS https://getcomposer.org/installer | \
 	php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer install 
 RUN composer dump-autoload -o 
-
-WORKDIR ghproxy
 
 CMD ["bash", "startup.sh"]
