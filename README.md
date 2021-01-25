@@ -1,4 +1,4 @@
-# ghproxy
+# ghproxy-PHP
 
 Github文件下载加速PHP版，基于异步PHP框架 [ReactPHP](https://github.com/reactphp)开发，具有高性能、支持高并发的优点。
 
@@ -16,8 +16,8 @@ Github文件下载加速PHP版，基于异步PHP框架 [ReactPHP](https://github
 ````bash
 apt update
 apt upgrade -y
-apt install -y php-cli php-fpm php-bcmath php-gd php-mbstring \
-php-mysql php-opcache php-xml php-zip php-json php-imagick
+apt install php-cli php-fpm php-bcmath php-gd php-mbstring \
+php-mysql php-opcache php-xml php-zip php-json php-imagick -y
 ````
 
 安装composer：
