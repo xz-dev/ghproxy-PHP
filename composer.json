@@ -1,0 +1,17 @@
+{
+    "name": "JohnsonRan/ghproxy-PHP",
+    "description": "Github文件下载加速PHP版",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JohnsonRan",
+            "email": "Johnson_Ran@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "react/event-loop": "^1.1",
+        "react/http": "^1.2"
+    }
+}
