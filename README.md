@@ -15,7 +15,8 @@ Github文件下载加速PHP版，基于异步PHP框架 [ReactPHP](https://github
 
 ````bash
 apt update
-apt php-cli php-fpm php-bcmath php-gd php-mbstring \
+apt upgrade -y
+apt install -y php-cli php-fpm php-bcmath php-gd php-mbstring \
 php-mysql php-opcache php-xml php-zip php-json php-imagick
 ````
 
