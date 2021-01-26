@@ -4,7 +4,7 @@ require(__DIR__ . '/vendor/autoload.php');
 define('ROOT', __DIR__);
 
 // listen address, change to 0.0.0.0 to handle public requests
-define('ADDR', '127.0.0.1');
+define('ADDR', '0.0.0.0');
 define("PORT", 9000);
 
 // use jsdelivr/cnpmjs

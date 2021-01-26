@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx-server
+    restart: unless-stopped
+    volumes:
+      - ./nginx/certs/:/etc/nginx/certs/
+    depends_on:
+      - php
+    networks:
+      - app-network
+
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: php-server
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    expose:
+      - "9000"
+    networks:
+      - app-network
+
+networks:
+    app-network:
+      driver: bridge
