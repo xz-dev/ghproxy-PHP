@@ -7,6 +7,9 @@ services:
       dockerfile: Dockerfile
     container_name: nginx-server
     restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
     volumes:
       - ./nginx/certs/:/etc/nginx/certs/
     depends_on:
@@ -20,9 +23,6 @@ services:
       dockerfile: Dockerfile
     container_name: php-server
     restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
     expose:
       - "9000"
     networks:
